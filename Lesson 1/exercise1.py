@@ -2,6 +2,11 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-url = "https://github.com/ine-rmotr-curriculum/FreeCodeCamp-Pandas-Real-Life-Example/blob/master/data/sales_data.csv"
+#clear console terminator   
+import os
+clear = lambda: os.system('cls')
+clear()
 
-sales = pd.read_csv(url,on_bad_lines='skip')
+url = "https://github.com/LucaYan0506/Data-analyst/raw/master/Lesson%201/data/sales_data.csv"
+
+sales = pd.read_csv(url,parse_dates=['Date'])
